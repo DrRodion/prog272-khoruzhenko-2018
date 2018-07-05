@@ -1,4 +1,4 @@
-.App, .Address {
+.App {
   text-align: center;
 }
 
@@ -20,10 +20,6 @@
 
 .App-intro {
   font-size: large;
-}
-
-button {
-  cursor: pointer;
 }
 
 @keyframes App-logo-spin {
