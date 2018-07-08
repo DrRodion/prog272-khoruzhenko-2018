@@ -8,4 +8,3 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 // Render application
 ReactDOM.render(<MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}><App /></MuiThemeProvider>, document.getElementById('root'));
-
