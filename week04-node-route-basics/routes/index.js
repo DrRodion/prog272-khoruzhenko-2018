@@ -10,7 +10,7 @@ var calculateCircum = require('../source/calculateCircum');
 
 /* GET home page. */
 router.get('/', function(req, res, next) { 'use strict';
-	res.render('index', { title: 'NodeRouteBasics' });
+	res.render('index', { title: 'Maven Address' });
 });
 
 /* Calculate feet in X miles. */
