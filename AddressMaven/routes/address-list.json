@@ -1,15 +1,14 @@
-const unknown = 'unknown';
-const addresses = [
+[
     {
-        firstName: unknown,
-        lastName: unknown,
-        address: unknown,
-        city: unknown,
-        state: unknown,
-        zip: unknown,
-        phone: unknown,
-        fax: unknown,
-        tollfree: unknown
+        firstName: 'unknown',
+        lastName: 'unknown',
+        address: 'unknown',
+        city: 'unknown',
+        state: 'unknown',
+        zip: 'unknown',
+        phone: 'unknown',
+        fax: 'unknown',
+        tollfree: 'unknown'
     },
     {
         firstName: 'Patty',
@@ -30,8 +29,8 @@ const addresses = [
         state: 'WA.',
         zip: '98052',
         phone: '(425) 691-9651',
-        fax: unknown,
-        tollfree: unknown
+        fax: 'unknown',
+        tollfree: 'unknown'
     },
     {
         firstName: 'Test1',
@@ -66,6 +65,4 @@ const addresses = [
         fax: 'Test3',
         tollfree: 'Test3'
     }
-];
-
-export default addresses;
+]
