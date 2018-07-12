@@ -30,7 +30,7 @@ class AddressShow extends Component {
 			onClick={this.props.nextAddress}
 		  />
 		  <RaisedButton
-			id="setAddress"
+			id="previousAddress"
 			label="Previous Address"
 			labelPosition="before"
 			primary={true}

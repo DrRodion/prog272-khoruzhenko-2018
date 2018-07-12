@@ -4,6 +4,7 @@ import '../App.css';
 import Header from './Header';
 import Address from './Address';
 import GetFile from './GetFile';
+import registerServiceWorker from '../registerServiceWorker';
 
 class App extends Component {
   // Render
@@ -20,4 +21,5 @@ class App extends Component {
   }
 }
 
+registerServiceWorker();
 export default App;

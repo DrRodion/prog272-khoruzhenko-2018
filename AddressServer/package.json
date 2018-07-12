@@ -2,6 +2,7 @@
   "name": "NodeRouteBasics",
   "version": "0.0.0",
   "private": true,
+  "proxy": "http://localhost:30026",
   "scripts": {
     "test": "node jasmine-runner.js",
     "start": "nodemon ./bin/www"

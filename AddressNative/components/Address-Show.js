@@ -21,11 +21,18 @@ class AddressShow extends Component {
 		  
 		  <View style={Styles.buttonView}>
 			<Button
-				id="setAddress"
-				onPress={this.props.setAddress}
-				title="Set Address"
+				id="nextAddress"
+				onPress={this.props.nextAddress}
+				title="Next Address"
 				color="#841584"
-				accessibilityLabel="Set Address"
+				accessibilityLabel="Next Address"
+			/>
+			<Button
+				id="previousAddress"
+				onPress={this.props.previousAddress}
+				title="Previous Address"
+				color="#841584"
+				accessibilityLabel="Previous Address"
 			/>
 		  </View>
 		</View>
@@ -45,7 +52,8 @@ AddressShow.propTypes = {
 		fax: PropTypes.string,
 		tollfree: PropTypes.string
 	}),
-	setAddress: PropTypes.func
+	nextAddress: PropTypes.func,
+	previousAddress: PropTypes.func
 };
 
 export default AddressShow;
