@@ -1,21 +1,27 @@
-const RouteMaster = (function() { 
-    function RouteMaster() {}
-	
-	// Get AddressList via server route
+const RouteMaster = (function() {
+    'use strict';
+    // Constructor
+    function RouteMaster() {
+        var getAddressList = getAddressList();
+    }
+
     const getAddressList = function() {
-        fetch('../address-list')
+        fetch('/getAddressList')
             .then((result) => result.json())
             .then((returnValue) => {
                 alert(JSON.stringify(returnValue["result"]));
             })
             .catch((error) => { console.log(error); })
     };
-
+    
+    // Return constructor
     return RouteMaster;
 }());
 
 function create() {
+    'use strict';
     new RouteMaster();
 }
 
 window.onload = create;
+
