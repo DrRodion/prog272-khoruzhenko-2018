@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../App.css';
-import TempAddress from '../address-list'; // Temporary address list with default "unknown" address.
 import AddressShow from './Address-Show';
 
 class Address extends Component {
@@ -10,48 +9,45 @@ class Address extends Component {
 	
 	this.state = {
 		addressIndex: 0,
-		address: TempAddress[0],
-		addressList: TempAddress
+		addressList: "",
+		address: ""
 	};
   }
   
   // Get address list from server
   componentDidMount() {
-    fetch('/get-address-list')
+    this.getAddresses();
+  }
+  
+  getAddresses = () => {
+	fetch('/get-address-list')
 	.then(response => response.json())
 	.then(addressListFromServer => {
-		this.setState({ addressList: addressListFromServer });
-		this.setState({ addressIndex: 0 });
+		this.setState({ addressList: addressListFromServer["result"] });
 	})
 	.catch(ex => {
-		alert(ex);
-		//BUGBUG: This dumps whatever error the server returns (or tries to return)
 		console.log(ex);
-	});
+	}); 
   }
 
   // Next address 
-  nextAddress = () => {  
-	alert(JSON.stringify(this.state.addressList));
-	//BUGBUG: This simply dumps whatever is currently saved in addressList
-	
-	/*if (this.state.addressIndex < addressList.length - 1) {
+  nextAddress = () => { 
+	if (this.state.addressIndex < this.state.addressList.length - 1) {
+		this.state.addressIndex = this.state.addressIndex + 1;	
 		this.setState({
-			addressIndex: 1,
-			address: this.addressList[this.state.addressIndex]
+			address: this.state.addressList[this.state.addressIndex]
 		})
-	}*/
+	}
   };
   
   // Previous address 
   previousAddress = () => {
-	/*if (this.addressIndex > 1) {
-		this.addressIndex-=1;
+	if (this.state.addressIndex > 1) {
+		this.state.addressIndex = this.state.addressIndex - 1;	
 		this.setState({
-			addressIndex: 1,
-			address: this.addressList[this.addressIndex]
+			address: this.state.addressList[this.state.addressIndex]
 		})
-	}*/
+	}
   };
 	
   // Render

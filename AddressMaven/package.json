@@ -2,6 +2,7 @@
   "name": "week06-address-material-ui",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:30026",
   "dependencies": {
     "bower": "^1.8.4",
     "express": "^4.16.3",
