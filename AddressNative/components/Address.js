@@ -21,7 +21,7 @@ class Address extends Component {
   }
   
   getAddresses = () => {
-	fetch('/get-address-list')
+	fetch('http://10.0.0.196:30026/get-address-list')
 	.then(response => response.json())
 	.then(addressListFromServer => {
 		this.setState({ addressList: addressListFromServer["result"] });
@@ -30,7 +30,6 @@ class Address extends Component {
 		console.log(ex);
 	}); 
   }
-  
   
   // Next address 
   nextAddress = () => { 
