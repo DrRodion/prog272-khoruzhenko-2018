@@ -6,18 +6,18 @@ import Address from './Address';
 import GetFile from './GetFile';
 
 class App extends Component {
-  // Render
-  render() {
-    return (
-    <BrowserRouter>
-		<div className="App">
-			<Header />
-			<Route exact path="/" component={Address}/>
-            <Route path="/GetFile" component={GetFile}/>
-		</div>
-	</BrowserRouter>
-    );
-  }
+    // Render
+    render() {
+        return (
+            <BrowserRouter>
+                <div className="App">
+                    <Header />
+                    <Route exact path="/" component={Address}/>
+                    <Route path="/GetFile" component={GetFile}/>
+                </div>
+            </BrowserRouter>
+        );
+    }
 }
 
 export default App;

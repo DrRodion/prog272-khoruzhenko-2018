@@ -14,8 +14,8 @@ const Styles = StyleSheet.create({
         backgroundColor: 'skyblue'
     },
     displayArea: {
-        flexDirection: "column",
-        backgroundColor: "steelblue",
+        flexDirection: 'column',
+        backgroundColor: 'steelblue',
     },
     centerContent: {
         justifyContent: 'center',

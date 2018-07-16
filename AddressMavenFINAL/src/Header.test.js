@@ -8,14 +8,14 @@ configure({adapter: new Adapter()});
 
 // Test Header component functionality
 describe('Test Header component functionality', function() {
-   it('renders without crashing', () => {
-       const div = document.createElement('div');
-       ReactDOM.render(<MemoryRouter><Header /></MemoryRouter>, div);
-   });
+    it('renders without crashing', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<MemoryRouter><Header /></MemoryRouter>, div);
+    });
 
-   it('renders and reads H1 text', () => {
-       const wrapper = shallow(<Header />);
-       const welcome = <h1 className="App-title">Address Maven</h1>;
-       expect(wrapper.contains(welcome)).toBe(true);
-   });
+    it('renders and reads H1 text', () => {
+        const wrapper = shallow(<Header />);
+        const welcome = <h1 className="App-title">Address Maven</h1>;
+        expect(wrapper.contains(welcome)).toBe(true);
+    });
 });

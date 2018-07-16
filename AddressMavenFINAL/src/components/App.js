@@ -7,18 +7,18 @@ import GetFile from './GetFile';
 import registerServiceWorker from '../registerServiceWorker';
 
 class App extends Component {
-  // Render
-  render() {
-    return (
-    <BrowserRouter>
-		<div className="App">
-			<Header />
-			<Route exact path="/" component={Address}/>
-            <Route path="/GetFile" component={GetFile}/>
-		</div>
-	</BrowserRouter>
-    );
-  }
+    // Render
+    render() {
+        return (
+            <BrowserRouter>
+                <div className="App">
+                    <Header />
+                    <Route exact path="/" component={Address}/>
+                    <Route path="/GetFile" component={GetFile}/>
+                </div>
+            </BrowserRouter>
+        );
+    }
 }
 
 registerServiceWorker();
